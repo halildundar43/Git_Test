@@ -4,7 +4,7 @@ public class Personel {
 	public String isim;
 	public int sayi;
 	
-	public Personel() {
+	public Personel() { // parametresiz bir constructor oluþturdum
 		// super();
 				/*
 				  Jaca dan yardým alarak bir constructor oluþturduðumuzda
