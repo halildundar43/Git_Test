@@ -4,23 +4,23 @@ public class Exceptions03 {
 
 	public static void main(String[] args) {
 		
-int arr[]= {1,4,7,8};
+		int arr[]= {1,4,7,8};
         
         try {
         System.out.println(arr[2]);
         
-        } catch (ArrayIndexOutOfBoundsException e) {
-            e.printStackTrace();
+        } catch (ArrayIndexOutOfBoundsException e) { // burayý kapatýrsak exception fýrlatýr ve finally görevini yapar
+            e.printStackTrace();					 // sonra programý kapatýr. son yazýlaný yazdýrmaz.
         } 
         finally {
-            System.out.println("ne olursa olsun bu satir yazilsin");
+            System.out.println("Ne olursa olsun bu satýr yazýlsýn");
         }
         
-        System.out.println("kod bloke olmamis");
+        System.out.println("Kod bloke olmamýþ");
         
-        // Finally blogu try-catch blogu ile veya sadece try blogu ile calisabilir.
-        // Finnally blogu catch ile ongordugum bir sorun oldugunda calistigi gibi
-        // ongoremedigim bir exception olustugunda da calisir....
+        // Finally blogu try-catch blogu ile veya sadece try blogu ile calýþabilir.
+        // Finnally blogu catch ile öngördüðüm bir sorun olduðunda calýþtýðý gibi
+        // öngöremediðim bir exception oluþtuðunda da çalýþýr....
 
 	}
 }

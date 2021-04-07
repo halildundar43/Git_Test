@@ -6,14 +6,14 @@ public static void main(String[] args) throws InvalidEmailIdCheckedException {
         
         String email="rasit@hotmail.com";
         
-        mailDogrula(email) ;
+        mailDogrula(email);
     }
     public static void mailDogrula(String email) throws InvalidEmailIdCheckedException {
         
         if (email.contains("@gmail.com") || email.contains("@hotmail.com")) {
-            System.out.println("mailiniz basariyla kaydedildi");
+            System.out.println("Mailiniz baþarýyla kaydedildi");
         } else {
-            throw new InvalidEmailIdCheckedException("email uygun degil");
+            throw new InvalidEmailIdCheckedException("email uygun deðil");
         }
     }
 }

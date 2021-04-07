@@ -3,44 +3,45 @@ package day40_exceptions;
 import java.util.Scanner;
 public class Exceptions01 {
     
+	@SuppressWarnings("resource")
 	public static void main(String[] args) {
-        // Kullanicidan yasini girmesini isteyin. 
-        // Kodunuzu kullanici sifirdan kucuk bir sayi girerse Exception verecek 
-        // sekilde yazin.
+        // Kullanýcýdan yaþýný girmesini isteyin. 
+        // Kodunuzu kullanýcý sýfýrdan küçük bir sayý girerse Exception verecek 
+        // þekilde yazýn.
         
         Scanner scan =new Scanner(System.in);
-        System.out.println("Lutfen yazsinizi giriniz");
+        System.out.println("Lütfen yaþýnýzý giriniz");
         int yas=scan.nextInt();
         
         if (yas>=0) {
-            System.out.println("Girdiginiz yas : " + yas);
+            System.out.println("Girdiðiniz yaþ : " + yas);
         }else {
             throw new IllegalArgumentException();
         }
         System.out.println("Kod bloke olmamýþ");
         
-        // Java'ya bir exception throw ettirmek icin "throw" ve "new " keyword'leri kullanilir
+        // Java'ya bir exception throw ettirmek icin "throw" ve "new " keyword'leri kullanýlýr
     
-        // bu sekilde yazdigimizda Java exception throw eder ama
-        // kodumuz da bloke olmus olur.
-        // bloke olmasini engellemek isterseniz kodu try catch ile surround yapabiliriz
+        // bu þekilde yazdýðýmýzda Java exception throw eder ama
+        // kodumuz da bloke olmuþ olur.
+        // bloke olmasýný engellemek isterseniz kodu try catch ile surround yapabiliriz
         
         /*
         Scanner scan =new Scanner(System.in);
-        System.out.println("Lutfen yazsinizi giriniz");
+        System.out.println("Lütfen yaþýnýzý giriniz");
         int yas=scan.nextInt();
         
         try {
             
         if (yas>=0) {
-            System.out.println("Girdiginiz yas : " + yas);
+            System.out.println("Girdiðiniz yaþ : " + yas);
         }else {
             throw new IllegalArgumentException();
         }
         } catch (IllegalArgumentException e) {
             e.printStackTrace();
         }
-        System.out.println("Kod bloke olmamis");
+        System.out.println("Kod bloke olmamýþ");
         */
         scan.close();
     } 

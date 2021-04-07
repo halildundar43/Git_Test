@@ -2,32 +2,34 @@ package day41_errors_garbagecollector;
 
 import java.util.ArrayList;
 import java.util.List;
-public class GarbageCollector01{
+public class GarbageCollector01 {
+	
     public static void main(String[] args) {
         
-        String str="";
+        @SuppressWarnings("unused")
+		String str="";
         for (int i = 0; i < 1000 ; i++) {
             str+=i;
         }
-        
-        // bu kod calistiginda kac tane obje olusur ?
+        // bu kod çalýþtýðýnda kaç tane obje oluþur ?
         // 1001 
-        // ilk basta 1 tane olusturduk
-        // sonra her dongude str'a concatination yapilacak
-        // ama String class'i immutable oldugu icin her yeni degeri koymak icin
-        // yeni bir String objesi olusturulur ve eski obje'den pointer silinir
+        // ilk baþta 1 tane oluþturduk
+        // sonra her döngüde str'a concatination yapýlacak
+        // ama String class'ý immutable olduðu için her yeni deðeri koymak için
+        // yeni bir String objesi oluþturulur ve eski obje'den pointer silinir
         
-        // dolayisiyla loop bittiginde str icin 1 tane pointer'in isaret ettigi obje,
-        // 1000 tane de hic bir pointer'in israet etmedigi obje heap memory de bulunur.
+        // dolayýsýyla loop bittiðinde str için 1 tane pointer'in iþaret ettiði obje,
+        // 1000 tane de hiç bir pointer'in iþaret etmediði obje heap memory de bulunur.
         
-        List<Integer> list = new ArrayList<>();
-        // bu satir java'ya yeni bir obje olusturmasini soyluyor
-        // Java yeni obje icin yer var mi diye memory'i kontrol eder ve memory kritik seviyede ise
+        @SuppressWarnings("unused")
+		List<Integer> list = new ArrayList<>();
+        
+        // bu satýr java'ya yeni bir obje oluþturmasýný söylüyor
+        // Java yeni obje için yer var mý diye memory'i kontrol eder ve memory kritik seviyede ise
         // Garbage collector'u devreye sokuyor...
         
-        // Garbage collector finalize() methodunu calistirir
-        // finalize method'u silinecek objeleri isaretler ve 
-        // sonra Garbage collector finalized olan objeleri siler.
+        // Garbage collector finalize() methodunu calýþtýrýr
+        // finalize method'u silinecek objeleri iþaretler ve 
+        // sonra Garbage collector finalize olan objeleri siler.
     }
-
 }
